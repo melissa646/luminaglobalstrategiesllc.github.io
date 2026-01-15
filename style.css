@@ -1,17 +1,19 @@
 :root{
-  --navy:#143646;      /* softer deep blue */
-  --slate:#2f6f7d;     /* muted teal-blue */
-  --teal:#4fb6c1;      /* light calming teal */
-  --ivory:#f7f5f1;
+  --navy:#1b4252;      /* softer, lighter blue */
+  --slate:#3f7f8f;     /* calm, airy blue-teal */
+  --teal:#7fcfd6;      /* light, peaceful teal */
+  --ivory:#faf8f4;
   --ink:#1f2937;
-  --muted: rgba(247,245,241,.9);
-  --card: rgba(255,255,255,.10);
-  --card2: rgba(255,255,255,.14);
-  --stroke: rgba(255,255,255,.18);
-  --shadow: 0 14px 30px rgba(0,0,0,.18);
+
+  --muted: rgba(250,248,244,.92);
+  --card: rgba(255,255,255,.12);
+  --card2: rgba(255,255,255,.16);
+  --stroke: rgba(255,255,255,.20);
+  --shadow: 0 12px 26px rgba(0,0,0,.14);
   --radius: 18px;
   --max: 1120px;
 }
+
 
 /* Reset */
 *{box-sizing:border-box}
