@@ -157,13 +157,13 @@ a{color:inherit;text-decoration:none}
 
 /* Hero */
 .hero{
-  padding: 92px 0 44px;
+  padding: 108px 0 54px;
 }
 
 .hero-inner{
-  max-width: 920px;
+  max-width: 980px;
   margin: 0 auto;
-  text-align:center;
+  text-align: center;
 }
 
 /* Eyebrow */
