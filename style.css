@@ -4,11 +4,10 @@
   --teal:#7fcfd6;      /* light, peaceful teal */
   --ivory:#faf8f4;
   --ink:#1f2937;
-
   --muted: rgba(250,248,244,.92);
-  --card: rgba(255,255,255,.12);
-  --card2: rgba(255,255,255,.16);
-  --stroke: rgba(255,255,255,.20);
+  --card: rgba(255,255,255,.16);
+  --card2: rgba(255,255,255,.18);
+  --stroke: rgba(255,255,255,.22);
   --shadow: 0 12px 26px rgba(0,0,0,.14);
   --radius: 18px;
   --max: 1120px;
