@@ -38,9 +38,9 @@ a{color:inherit;text-decoration:none}
   position: sticky;
   top: 0;
   z-index: 50;
-  backdrop-filter: blur(12px);
-  background: rgba(11,36,51,.42); /* lighter than before */
-  border-bottom: 1px solid rgba(255,255,255,.10);
+  backdrop-filter: blur(14px);
+  background: rgba(42,86,102,.38);
+  border-bottom: 1px solid rgba(255,255,255,.22);
 }
 
 .nav{
