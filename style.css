@@ -368,6 +368,18 @@ h2{
 .card ul{margin:0;padding-left:18px;color:rgba(246,243,236,.86)}
 .card li{margin:6px 0}
 
+.industry-line {
+  margin-top: 28px;
+  text-align: center;
+  font-size: 15px;
+  color: rgba(245,241,232,0.8);
+  letter-spacing: 0.3px;
+}
+
+.industry-line span {
+  font-weight: 500;
+}
+
 /* Video */
 .two-col{
   display:grid;
