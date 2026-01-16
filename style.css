@@ -413,6 +413,105 @@ h2{
 .card ul{margin:0;padding-left:18px;color:rgba(246,243,236,.86)}
 .card li{margin:6px 0}
 
+/* ===== Testimonials (match reference layout) ===== */
+.testimonials-modern{
+  padding-top: 70px;
+  padding-bottom: 90px;
+}
+
+.testimonials-title{
+  text-align:center;
+  margin: 0 0 34px;
+  font-size: clamp(28px, 3.2vw, 44px);
+  letter-spacing: -.3px;
+}
+
+/* Grid */
+.testimonials-grid{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 22px;
+  align-items: stretch;
+}
+
+/* Card */
+.t-card{
+  background: rgba(245,241,232,.88); /* light ivory like the reference */
+  color: rgba(11,31,42,.92);
+  border: 1px solid rgba(11,31,42,.10);
+  border-radius: 18px;
+  padding: 26px 24px 22px;
+  box-shadow: 0 14px 30px rgba(0,0,0,.14);
+  display:flex;
+  flex-direction: column;
+  min-height: 420px;
+}
+
+/* Initials badge */
+.t-badge{
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight: 750;
+  letter-spacing: .6px;
+  font-size: 14px;
+  margin-bottom: 16px;
+
+  background: rgba(42,167,162,.14);
+  border: 1px solid rgba(42,167,162,.35);
+  color: rgba(11,31,42,.88);
+}
+
+/* Quote */
+.t-quote{
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  font-style: italic;
+  color: rgba(11,31,42,.78);
+}
+
+/* Divider line inside card */
+.t-line{
+  height: 1px;
+  width: 70%;
+  margin: 18px 0 14px;
+  background: rgba(11,31,42,.22);
+  opacity: .7;
+}
+
+/* Name / Title */
+.t-person{
+  margin-top: auto;
+}
+
+.t-name{
+  font-weight: 750;
+  color: rgba(11,31,42,.92);
+  margin-bottom: 4px;
+}
+
+.t-title{
+  font-size: 13px;
+  color: rgba(11,31,42,.70);
+}
+
+/* Responsive */
+@media (max-width: 980px){
+  .testimonials-grid{
+    grid-template-columns: 1fr;
+  }
+  .t-card{
+    min-height: auto;
+  }
+  .t-line{
+    width: 60%;
+  }
+}
+
 .industry-line {
   margin-top: 28px;
   text-align: center;
