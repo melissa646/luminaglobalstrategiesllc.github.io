@@ -1039,3 +1039,13 @@ h2{
 .fineprint a:hover {
   color: #ffffff;
 }
+
+.fineprint {
+  font-size: 1.1rem;   /* increase overall size */
+  margin-top: 24px;
+}
+
+.fineprint a {
+  font-size: 1.1rem;   /* ensure the link matches */
+  font-weight: 500;
+}
