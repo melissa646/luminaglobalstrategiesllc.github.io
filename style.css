@@ -413,6 +413,106 @@ h2{
 .card ul{margin:0;padding-left:18px;color:rgba(246,243,236,.86)}
 .card li{margin:6px 0}
 
+/* ===== Results (Upgraded) ===== */
+.results-upgraded .results-head{
+  max-width: 920px;
+  margin: 0 auto 26px;
+}
+
+.results-grid{
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 22px;
+  align-items: start;
+}
+
+/* Left column */
+.outcomes{
+  display: grid;
+  gap: 14px;
+}
+
+.outcome-card{
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: var(--radius);
+  padding: 18px 18px 16px;
+  box-shadow: 0 14px 30px rgba(0,0,0,.16);
+}
+
+.outcome-card h3{
+  margin: 0 0 8px;
+  font-size: 18px;
+  letter-spacing: -.2px;
+}
+
+.outcome-card p{
+  margin: 0;
+  color: rgba(245,241,232,.88);
+  line-height: 1.55;
+}
+
+.results-signals{
+  margin-top: 18px;
+  padding: 16px 18px;
+  border-radius: var(--radius);
+  background: rgba(11,31,42,.18);
+  border: 1px solid rgba(255,255,255,.10);
+}
+
+.results-signals h4{
+  margin: 0 0 10px;
+  font-size: 14px;
+  letter-spacing: .2px;
+  text-transform: uppercase;
+  color: rgba(245,241,232,.92);
+}
+
+.results-signals ul{
+  margin: 0;
+  padding-left: 18px;
+  color: rgba(245,241,232,.86);
+}
+
+.results-signals li{
+  margin: 8px 0;
+}
+
+/* Right column quotes */
+.results-quotes{
+  display: grid;
+  gap: 12px;
+}
+
+.r-quote{
+  margin: 0;
+  padding: 16px 16px 14px;
+  border-radius: var(--radius);
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.14);
+  box-shadow: 0 14px 30px rgba(0,0,0,.14);
+}
+
+.r-quote blockquote{
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.55;
+  color: rgba(245,241,232,.92);
+}
+
+.r-quote figcaption{
+  margin-top: 10px;
+  font-size: 13px;
+  color: rgba(245,241,232,.78);
+}
+
+/* Responsive */
+@media (max-width: 900px){
+  .results-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ===== Testimonials (match reference layout) ===== */
 .testimonials-modern{
   padding-top: 70px;
