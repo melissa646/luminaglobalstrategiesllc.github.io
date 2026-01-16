@@ -754,6 +754,39 @@ h2{
   color: rgba(245,241,232,.96);
 }
 
+/* === Approach section: add contrast + separation === */
+.approach-grid{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 18px;
+  align-items: start;
+}
+
+.approach-card{
+  background: rgba(255,255,255,.10);         /* was too close to bg */
+  border: 1px solid rgba(255,255,255,.18);   /* clearer edge */
+  border-radius: 22px;
+  padding: 28px 28px 24px;
+  box-shadow: 0 24px 60px rgba(0,0,0,.16);
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+/* subtle “light wash” so it doesn’t feel flat */
+.approach-card::before{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  background:
+    radial-gradient(900px 420px at 15% 10%, rgba(255,255,255,.14), transparent 55%),
+    radial-gradient(700px 380px at 90% 0%, rgba(42,167,162,.14), transparent 60%);
+  pointer-events:none;
+}
+
+/* keep text above the wash */
+.approach-card > *{ position:relative; z-index:1; }
+
 /* Responsive */
 @media (max-width: 900px){
   .approach-grid{
