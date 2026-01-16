@@ -641,3 +641,77 @@ h2{
   );
   opacity: 0.6;
 }
+
+/* THE APPROACH SECTION */
+
+.approach-section{
+  background: rgba(255,255,255,.03);
+  border-top: 1px solid rgba(255,255,255,.08);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.approach-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.approach-block{
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: var(--radius);
+  padding: 26px 26px 22px;
+}
+
+.approach-block h2{
+  margin-top: 0;
+}
+
+.approach-lead{
+  font-size: 16px;
+  color: rgba(245,241,232,.92);
+  margin-bottom: 12px;
+}
+
+.approach-highlight{
+  font-weight: 600;
+  font-size: 17px;
+  margin-bottom: 14px;
+  color: rgba(245,241,232,.98);
+}
+
+.approach-list{
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 16px;
+  display: grid;
+  gap: 10px;
+}
+
+.approach-list li{
+  color: rgba(245,241,232,.9);
+  position: relative;
+  padding-left: 18px;
+}
+
+.approach-list li::before{
+  content: "—";
+  position: absolute;
+  left: 0;
+  opacity: .6;
+}
+
+.approach-manifesto{
+  font-weight: 600;
+  margin: 16px 0;
+  line-height: 1.6;
+  color: rgba(245,241,232,.96);
+}
+
+/* Responsive */
+@media (max-width: 900px){
+  .approach-grid{
+    grid-template-columns: 1fr;
+  }
+}
