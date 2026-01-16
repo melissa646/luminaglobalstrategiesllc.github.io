@@ -793,3 +793,21 @@ h2{
     grid-template-columns: 1fr;
   }
 }
+
+/* Emphasis style: brighter + readable + signature */
+.approach-highlight{
+  margin: 14px 0 18px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(11,31,42,.18);
+  border: 1px solid rgba(255,255,255,.18);
+  box-shadow: 0 10px 24px rgba(0,0,0,.10);
+  color: rgba(255,255,255,.96);
+  font-weight: 750;
+  line-height: 1.35;
+}
+
+.approach-highlight strong{
+  color: rgba(255,255,255,.98);
+  font-weight: 800;
+}
