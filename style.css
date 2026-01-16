@@ -811,3 +811,22 @@ h2{
   color: rgba(255,255,255,.98);
   font-weight: 800;
 }
+
+/* Improve readability for the "What This Work Is Not" list */
+.approach-card ul{
+  margin: 16px 0 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.approach-card li{
+  padding: 12px 0;
+  border-top: 1px solid rgba(255,255,255,.15);
+  color: rgba(245,241,232,.95);
+  line-height: 1.5;
+}
+
+.approach-card li:first-child{
+  border-top: 0;
+  padding-top: 0;
+}
