@@ -1394,3 +1394,37 @@ html {
     display: none;
   }
 }
+
+/* ===== The Work cards: refined entrance animation ===== */
+
+.work-card{
+  position: relative;
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 800ms ease, transform 800ms ease;
+  will-change: opacity, transform;
+}
+
+.work-card.is-visible{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Gentle stagger (slower than cred cards) */
+.work-card:nth-child(1){ transition-delay: 0ms; }
+.work-card:nth-child(2){ transition-delay: 160ms; }
+.work-card:nth-child(3){ transition-delay: 320ms; }
+
+/* Subtle hover refinement */
+.work-card:hover{
+  transform: translateY(-3px);
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .work-card{
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
