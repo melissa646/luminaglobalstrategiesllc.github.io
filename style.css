@@ -1324,3 +1324,73 @@ html {
     transition: none;
   }
 }
+
+/* ===== Credibility cards: classy entrance + shine sweep ===== */
+
+/* Entrance (fade + rise) */
+.cred{
+  position: relative;
+  overflow: hidden;                 /* needed for shine */
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 700ms ease, transform 700ms ease;
+  will-change: opacity, transform;
+}
+
+.cred.is-visible{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger */
+.cred:nth-child(1){ transition-delay: 0ms; }
+.cred:nth-child(2){ transition-delay: 120ms; }
+.cred:nth-child(3){ transition-delay: 240ms; }
+.cred:nth-child(4){ transition-delay: 360ms; } /* if you add a 4th later */
+
+/* Optional: tiny hover lift (keeps it lively) */
+.cred:hover{
+  transform: translateY(-2px);
+}
+
+/* Shine sweep overlay (runs once when .shine is added) */
+.cred::after{
+  content: "";
+  position: absolute;
+  top: -40%;
+  left: -120%;
+  width: 70%;
+  height: 180%;
+  transform: skewX(-18deg);
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255,255,255,0.18),
+    transparent
+  );
+  opacity: 0;
+  pointer-events: none;
+}
+
+.cred.shine::after{
+  animation: credShine 900ms ease-out 120ms 1 both;
+}
+
+@keyframes credShine{
+  0%   { left: -120%; opacity: 0; }
+  18%  { opacity: 0.75; }
+  55%  { opacity: 0.35; }
+  100% { left: 140%; opacity: 0; }
+}
+
+/* Premium touch: respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .cred{
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .cred::after{
+    display: none;
+  }
+}
