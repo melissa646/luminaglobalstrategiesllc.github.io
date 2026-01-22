@@ -567,6 +567,19 @@
   }, { threshold: 0.25 });
 
   cards.forEach((c) => obs.observe(c));
+    // Work cards animation
+  const workCards = document.querySelectorAll(".work-card");
+
+  const workObs = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+
+      entry.target.classList.add("is-visible");
+      workObs.unobserve(entry.target);
+    });
+  }, { threshold: 0.22 });
+
+  workCards.forEach((card) => workObs.observe(card));
 </script>
 
 </body>
