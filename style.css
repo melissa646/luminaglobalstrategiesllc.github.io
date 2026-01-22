@@ -1238,3 +1238,19 @@ html {
 .nav::before {
   pointer-events: none;
 }
+
+.values-list {
+  margin: 0;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.values-list li {
+  margin-bottom: 12px;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.values-list strong {
+  font-weight: 600;
+}
