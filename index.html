@@ -542,23 +542,32 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
-  <script>
+<script>
   // Footer year
   document.getElementById("year").textContent = new Date().getFullYear();
 
-  // Cred card reveal animation
+  // Credibility cards: reveal + shine sweep (once)
   const cards = document.querySelectorAll(".cred");
 
-  const reveal = new IntersectionObserver((entries) => {
+  const obs = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-        reveal.unobserve(entry.target); // animate once
-      }
-    });
-  }, { threshold: 0.2 });
+      if (!entry.isIntersecting) return;
 
-  cards.forEach((c) => reveal.observe(c));
+      const el = entry.target;
+
+      // reveal
+      el.classList.add("is-visible");
+
+      // shine (trigger once)
+      el.classList.add("shine");
+      el.addEventListener("animationend", () => el.classList.remove("shine"), { once: true });
+
+      obs.unobserve(el);
+    });
+  }, { threshold: 0.25 });
+
+  cards.forEach((c) => obs.observe(c));
 </script>
+
 </body>
 </html>
