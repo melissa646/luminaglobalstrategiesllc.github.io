@@ -1189,3 +1189,52 @@ html {
 .nav-links {
   gap: 28px;
 }
+
+.site-header,
+.nav {
+  position: relative;
+  z-index: 9999;
+}
+
+.nav-item.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  z-index: 10000;
+}
+
+.dropdown-menu {
+  pointer-events: auto;
+}
+
+.dropdown-menu a {
+  pointer-events: auto;
+}
+
+.dropdown-menu {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+  transition: opacity .18s ease, transform .18s ease, visibility .18s ease;
+}
+
+.nav-item.dropdown:hover .dropdown-menu,
+.nav-item.dropdown:focus-within .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.site-header,
+.nav {
+  overflow: visible;
+}
+
+.site-header::before,
+.nav::before {
+  pointer-events: none;
+}
