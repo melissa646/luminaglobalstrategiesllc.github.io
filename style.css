@@ -1312,3 +1312,7 @@ html {
 .cred:nth-child(2) { transition-delay: 120ms; }
 .cred:nth-child(3) { transition-delay: 240ms; }
 .cred:nth-child(4) { transition-delay: 360ms; } /* if you ever add a 4th */
+
+.cred:hover{
+  transform: translateY(-2px);
+}
