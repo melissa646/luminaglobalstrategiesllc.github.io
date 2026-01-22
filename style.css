@@ -1186,3 +1186,6 @@ html {
   font-weight: 600;
   white-space: nowrap;
 }
+.nav-links {
+  gap: 28px;
+}
