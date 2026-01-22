@@ -546,7 +546,7 @@
   // Footer year
   document.getElementById("year").textContent = new Date().getFullYear();
 
-  // Credibility cards: reveal + shine sweep (once)
+  // Credibility cards animation
   const cards = document.querySelectorAll(".cred");
 
   const obs = new IntersectionObserver((entries) => {
@@ -554,11 +554,7 @@
       if (!entry.isIntersecting) return;
 
       const el = entry.target;
-
-      // reveal
       el.classList.add("is-visible");
-
-      // shine (trigger once)
       el.classList.add("shine");
       el.addEventListener("animationend", () => el.classList.remove("shine"), { once: true });
 
@@ -567,7 +563,8 @@
   }, { threshold: 0.25 });
 
   cards.forEach((c) => obs.observe(c));
-    // Work cards animation
+
+  // Work cards animation
   const workCards = document.querySelectorAll(".work-card");
 
   const workObs = new IntersectionObserver((entries) => {
