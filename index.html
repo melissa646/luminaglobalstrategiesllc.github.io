@@ -542,5 +542,23 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+  <script>
+  // Footer year
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Cred card reveal animation
+  const cards = document.querySelectorAll(".cred");
+
+  const reveal = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        reveal.unobserve(entry.target); // animate once
+      }
+    });
+  }, { threshold: 0.2 });
+
+  cards.forEach((c) => reveal.observe(c));
+</script>
 </body>
 </html>
