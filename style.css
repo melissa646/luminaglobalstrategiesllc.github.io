@@ -397,7 +397,7 @@ h2{
 }
 
 .card{
-  background: var (--card);
+  background: var(--card);
   border: 1px solid var(--stroke);
   border-radius: var(--radius);
   padding: 22px 22px 20px;
@@ -1189,11 +1189,10 @@ html {
 .nav-links {
   gap: 28px;
 }
-
-.site-header,
-.nav {
-  position: relative;
-  z-index: 9999;
+.site-header{
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .nav-item.dropdown {
@@ -1429,20 +1428,19 @@ html {
   }
 }
 
-/* Soft cursor glow overlay */
-#cursor-glow {
+/* Soft cursor glow overlay (site-wide) */
+#cursor-glow{
   position: fixed;
   inset: 0;
-  pointer-events: none; /* so it never blocks clicks */
-  z-index: 9999;
+  pointer-events: none;
+  z-index: 40;              /* below header (100), above content */
   opacity: 0;
   transition: opacity 200ms ease;
   will-change: background;
 }
 
-/* Respect users who prefer reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  #cursor-glow {
-    display: none;
-  }
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce){
+  #cursor-glow{ display:none; }
+}
 }
