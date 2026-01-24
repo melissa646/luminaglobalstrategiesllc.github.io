@@ -580,6 +580,44 @@
 
   workCards.forEach((card) => workObs.observe(card));
 </script>
+
+  <script>
+(() => {
+  const glowEl = document.getElementById("cursor-glow");
+  if (!glowEl) return;
+
+  let x = 0, y = 0;
+  let rafId = null;
+
+  const render = () => {
+    rafId = null;
+
+    // Soft, layered glow. Uses two radial gradients for depth.
+    glowEl.style.background = `
+      radial-gradient(220px circle at ${x}px ${y}px, rgba(120, 200, 255, 0.18), transparent 60%),
+      radial-gradient(520px circle at ${x}px ${y}px, rgba(80, 160, 255, 0.10), transparent 65%)
+    `;
+  };
+
+  const onMove = (e) => {
+    x = e.clientX;
+    y = e.clientY;
+
+    // Fade in once the user interacts
+    if (glowEl.style.opacity !== "1") glowEl.style.opacity = "1";
+
+    if (!rafId) rafId = requestAnimationFrame(render);
+  };
+
+  const onLeave = () => {
+    glowEl.style.opacity = "0";
+  };
+
+  window.addEventListener("pointermove", onMove, { passive: true });
+  window.addEventListener("blur", onLeave);
+  document.addEventListener("mouseleave", onLeave);
+})();
+</script>
   
 </body>
 </html>
