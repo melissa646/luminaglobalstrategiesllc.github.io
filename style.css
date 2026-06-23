@@ -280,6 +280,48 @@ h1{
   margin-top:2px
 }
 
+.pain-points-section {
+  padding: 90px 8%;
+  background: linear-gradient(135deg, #071826, #102f3f);
+  color: #f7f1e8;
+}
+
+.section-kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+  color: #8fd3c7;
+  margin-bottom: 16px;
+}
+
+.pain-points-section h2 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1.05;
+  max-width: 900px;
+  margin-bottom: 24px;
+}
+
+.section-intro {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  max-width: 760px;
+  margin-bottom: 40px;
+}
+
+.pain-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.pain-card {
+  padding: 22px;
+  border: 1px solid rgba(247, 241, 232, 0.18);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+  font-weight: 600;
+}
 /* Sections */
 .section{padding: 76px 0}
 /* ===== "The Work" section (3 tall boxes like your reference) ===== */
