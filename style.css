@@ -1525,4 +1525,84 @@ html {
 @media (prefers-reduced-motion: reduce){
   #cursor-glow{ display:none; }
 }
+/* ===== What Lumina Solves: Premium Section ===== */
 
+.pain-points-section {
+  padding: 90px 22px !important;
+  background: #faf8f4 !important;
+  color: #173847 !important;
+}
+
+.pain-points-section .section-kicker,
+.pain-points-section h2,
+.pain-points-section .section-intro,
+.pain-grid {
+  max-width: 1120px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.pain-points-section .section-kicker {
+  margin-bottom: 14px !important;
+  color: #3f7f8f !important;
+  font-size: 13px !important;
+  font-weight: 800 !important;
+  letter-spacing: .16em !important;
+  text-transform: uppercase !important;
+}
+
+.pain-points-section h2 {
+  margin-bottom: 18px !important;
+  color: #173847 !important;
+  font-size: clamp(36px, 4vw, 58px) !important;
+  line-height: 1.05 !important;
+}
+
+.pain-points-section .section-intro {
+  max-width: 760px !important;
+  margin-bottom: 42px !important;
+  font-size: 18px !important;
+  line-height: 1.7 !important;
+  color: rgba(31,41,55,.76) !important;
+}
+
+.pain-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 16px !important;
+}
+
+.pain-card {
+  min-height: 145px !important;
+  padding: 24px !important;
+  border-radius: 22px !important;
+  background: #ffffff !important;
+  color: #173847 !important;
+  border: 1px solid rgba(27,66,82,.14) !important;
+  box-shadow: 0 18px 40px rgba(27,66,82,.14) !important;
+  font-size: 17px !important;
+  font-weight: 750 !important;
+  line-height: 1.35 !important;
+  display: flex !important;
+  align-items: flex-end !important;
+}
+
+.pain-card:nth-child(1),
+.pain-card:nth-child(4),
+.pain-card:nth-child(6),
+.pain-card:nth-child(8) {
+  background: linear-gradient(135deg, #1b4252, #3f7f8f) !important;
+  color: #faf8f4 !important;
+}
+
+@media (max-width: 900px) {
+  .pain-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .pain-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
