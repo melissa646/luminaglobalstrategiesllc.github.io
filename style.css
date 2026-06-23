@@ -280,95 +280,87 @@ h1{
   margin-top:2px
 }
 
-/* ===== Pain Points Section: Premium Light Contrast ===== */
+/* ===== What Lumina Solves ===== */
 
-.pain-points-section {
-  padding: 86px 22px 92px;
-  background: rgba(250, 248, 244, 0.94);
+.pain-points-section{
+  padding: 92px 22px;
+  background: #faf8f4;
   color: #173847;
-  border-top: 1px solid rgba(27, 66, 82, 0.12);
-  border-bottom: 1px solid rgba(27, 66, 82, 0.12);
 }
 
-.pain-points-section .section-kicker {
+.pain-points-section .section-kicker,
+.pain-points-section h2,
+.pain-points-section .section-intro,
+.pain-grid{
   max-width: var(--max);
-  margin: 0 auto 14px;
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-  font-size: 0.78rem;
-  font-weight: 800;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pain-points-section .section-kicker{
+  margin-bottom: 14px;
   color: #3f7f8f;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .16em;
+  text-transform: uppercase;
 }
 
-.pain-points-section h2 {
-  max-width: var(--max);
-  margin: 0 auto 18px;
-  font-size: clamp(2.2rem, 4.8vw, 4.6rem);
-  line-height: 1;
-  color: #143646;
+.pain-points-section h2{
+  margin-bottom: 18px;
+  color: #173847;
+  font-size: clamp(34px, 4vw, 56px);
+  line-height: 1.05;
 }
 
-.pain-points-section .section-intro {
+.pain-points-section .section-intro{
+  margin-bottom: 42px;
   max-width: 780px;
-  margin: 0 auto 42px;
-  font-size: 1.12rem;
+  color: rgba(31,41,55,.78);
+  font-size: 18px;
   line-height: 1.7;
-  color: rgba(31, 41, 55, 0.78);
 }
 
-.pain-grid {
-  max-width: var(--max);
-  margin: 0 auto;
+.pain-grid{
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
 }
 
-.pain-card {
-  min-height: 130px;
-  padding: 24px 20px;
-  border-radius: 20px;
+.pain-card{
+  min-height: 145px;
+  padding: 22px;
+  border-radius: 22px;
   background: #ffffff;
   color: #173847;
-  border: 1px solid rgba(27, 66, 82, 0.12);
-  box-shadow: 0 18px 36px rgba(27, 66, 82, 0.12);
+  border: 1px solid rgba(27,66,82,.12);
+  box-shadow: 0 16px 32px rgba(27,66,82,.10);
+  font-size: 17px;
   font-weight: 750;
-  font-size: 1rem;
   line-height: 1.35;
   display: flex;
   align-items: flex-end;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.pain-card:nth-child(even) {
+.pain-card:nth-child(1),
+.pain-card:nth-child(4),
+.pain-card:nth-child(6),
+.pain-card:nth-child(8){
   background: linear-gradient(135deg, #1b4252, #3f7f8f);
   color: #faf8f4;
-  border-color: rgba(255, 255, 255, 0.18);
 }
 
-.pain-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 24px 46px rgba(27, 66, 82, 0.18);
-}
-
-@media (max-width: 900px) {
-  .pain-grid {
-    grid-template-columns: 1fr 1fr;
+@media (max-width: 900px){
+  .pain-grid{
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 600px) {
-  .pain-points-section {
-    padding: 66px 20px 72px;
-  }
-
-  .pain-grid {
+@media (max-width: 600px){
+  .pain-grid{
     grid-template-columns: 1fr;
   }
-
-  .pain-card {
-    min-height: 105px;
-  }
+}
 
 /* Sections */
 .section{padding: 76px 0}
@@ -1533,4 +1525,4 @@ html {
 @media (prefers-reduced-motion: reduce){
   #cursor-glow{ display:none; }
 }
-}
+
