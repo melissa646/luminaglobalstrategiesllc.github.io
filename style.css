@@ -280,48 +280,96 @@ h1{
   margin-top:2px
 }
 
+/* ===== Pain Points Section: Premium Light Contrast ===== */
+
 .pain-points-section {
-  padding: 90px 8%;
-  background: linear-gradient(135deg, #071826, #102f3f);
-  color: #f7f1e8;
+  padding: 86px 22px 92px;
+  background: rgba(250, 248, 244, 0.94);
+  color: #173847;
+  border-top: 1px solid rgba(27, 66, 82, 0.12);
+  border-bottom: 1px solid rgba(27, 66, 82, 0.12);
 }
 
-.section-kicker {
+.pain-points-section .section-kicker {
+  max-width: var(--max);
+  margin: 0 auto 14px;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-size: 0.8rem;
-  color: #8fd3c7;
-  margin-bottom: 16px;
+  letter-spacing: 0.16em;
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #3f7f8f;
 }
 
 .pain-points-section h2 {
-  font-size: clamp(2rem, 5vw, 4rem);
-  line-height: 1.05;
-  max-width: 900px;
-  margin-bottom: 24px;
+  max-width: var(--max);
+  margin: 0 auto 18px;
+  font-size: clamp(2.2rem, 4.8vw, 4.6rem);
+  line-height: 1;
+  color: #143646;
 }
 
-.section-intro {
-  font-size: 1.15rem;
+.pain-points-section .section-intro {
+  max-width: 780px;
+  margin: 0 auto 42px;
+  font-size: 1.12rem;
   line-height: 1.7;
-  max-width: 760px;
-  margin-bottom: 40px;
+  color: rgba(31, 41, 55, 0.78);
 }
 
 .pain-grid {
+  max-width: var(--max);
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 18px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
 }
 
 .pain-card {
-  padding: 22px;
-  border: 1px solid rgba(247, 241, 232, 0.18);
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(10px);
-  font-weight: 600;
+  min-height: 130px;
+  padding: 24px 20px;
+  border-radius: 20px;
+  background: #ffffff;
+  color: #173847;
+  border: 1px solid rgba(27, 66, 82, 0.12);
+  box-shadow: 0 18px 36px rgba(27, 66, 82, 0.12);
+  font-weight: 750;
+  font-size: 1rem;
+  line-height: 1.35;
+  display: flex;
+  align-items: flex-end;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
+.pain-card:nth-child(even) {
+  background: linear-gradient(135deg, #1b4252, #3f7f8f);
+  color: #faf8f4;
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.pain-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 46px rgba(27, 66, 82, 0.18);
+}
+
+@media (max-width: 900px) {
+  .pain-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .pain-points-section {
+    padding: 66px 20px 72px;
+  }
+
+  .pain-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pain-card {
+    min-height: 105px;
+  }
+
 /* Sections */
 .section{padding: 76px 0}
 /* ===== "The Work" section (3 tall boxes like your reference) ===== */
